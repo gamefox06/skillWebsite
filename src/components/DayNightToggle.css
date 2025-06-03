@@ -1,0 +1,110 @@
+.day-night-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-track {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #3a3a3a;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.light .toggle-track {
+  background-color: #87CEEB;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 2;
+}
+
+.dark .toggle-thumb {
+  transform: translateX(30px);
+  background-color: #e0e0e0;
+}
+
+.sun-moon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.sun {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+}
+
+.sun-rays {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid #f1c40f;
+  opacity: 0.7;
+}
+
+.moon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.moon-crater {
+  position: absolute;
+  background-color: #d0d0d0;
+  border-radius: 50%;
+}
+
+.moon-crater:nth-child(1) {
+  width: 6px;
+  height: 6px;
+  top: 3px;
+  left: 8px;
+}
+
+.moon-crater:nth-child(2) {
+  width: 4px;
+  height: 4px;
+  top: 10px;
+  left: 5px;
+}
+
+.day-night-toggle label {
+  font-size: 0.9rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.light .day-night-toggle label {
+  color: #333;
+}
+
+.day-night-toggle.animating .toggle-thumb {
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s ease;
+}

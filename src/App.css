@@ -1,0 +1,221 @@
+.app {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.app.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.app.light-mode {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.light-mode header {
+  background-color: rgba(240, 248, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.light-mode header h1 {
+  background: linear-gradient(90deg, #2980b9, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-btn {
+  background-color: rgba(60, 120, 200, 0.7);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(60, 120, 200, 0.3);
+}
+
+.control-btn:hover {
+  background-color: rgba(80, 140, 220, 0.9);
+  box-shadow: 0 0 15px rgba(80, 140, 220, 0.5);
+}
+
+.light-mode .control-btn {
+  background-color: rgba(40, 100, 180, 0.8);
+  color: white;
+  box-shadow: 0 0 10px rgba(40, 100, 180, 0.3);
+}
+
+.light-mode .control-btn:hover {
+  background-color: rgba(60, 120, 200, 0.9);
+  box-shadow: 0 0 15px rgba(60, 120, 200, 0.5);
+}
+
+main {
+  position: relative;
+}
+
+/* Light mode adjustments for scrollable content */
+.light-mode .scrollable-content {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.light-mode .content-section h2 {
+  color: #2980b9;
+}
+
+.light-mode .content-section p {
+  color: #444;
+}
+
+.light-mode .planet-type {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .planet-type h3 {
+  color: #2980b9;
+}
+
+.light-mode .planet-type p {
+  color: #555;
+}
+
+.light-mode .mission-list li {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .mission-list strong {
+  color: #c0392b;
+}
+
+.light-mode .content-footer {
+  border-top: 1px solid #ddd;
+  color: #666;
+}
+
+/* Light mode adjustments for orbit visualization */
+.light-mode .orbit-visualization {
+  background-color: rgba(240, 248, 255, 0.8);
+  color: #333;
+}
+
+.light-mode .orbit-visualization h2 {
+  color: #2980b9;
+}
+
+.light-mode .orbit-note,
+.light-mode .orbit-disclaimer {
+  color: #555;
+}
+
+.light-mode .orbit-canvas {
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+/* Light mode adjustments for mission timeline */
+.light-mode .mission-timeline {
+  background-color: rgba(240, 248, 255, 0.8);
+  color: #333;
+}
+
+.light-mode .mission-timeline h2 {
+  color: #2980b9;
+}
+
+.light-mode .timeline-intro {
+  color: #555;
+}
+
+.light-mode .filter-btn {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #333;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.light-mode .filter-btn:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+}
+
+.light-mode .filter-btn.active {
+  background-color: rgba(52, 152, 219, 0.4);
+  border-color: #2980b9;
+  color: #fff;
+}
+
+.light-mode .timeline-line {
+  background-color: #2980b9;
+}
+
+.light-mode .timeline-content {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .timeline-content:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .timeline-year {
+  background-color: #c0392b;
+}
+
+.light-mode .timeline-title {
+  color: #2980b9;
+}
+
+.light-mode .timeline-target {
+  color: #8e44ad;
+}
+
+.light-mode .timeline-description {
+  color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .feature-toggle-btn {
+    margin: 5px;
+  }
+}

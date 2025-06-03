@@ -1,0 +1,187 @@
+.scrollable-content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); /* Make background semi-transparent */
+}
+
+.light-mode .scrollable-content {
+  background-color: rgba(240, 248, 255, 0.7); /* Semi-transparent light background */
+  color: #333;
+}
+
+.content-section {
+  margin-bottom: 100px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.content-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.light-mode .content-section h2 {
+  color: #2980b9;
+}
+
+.content-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+}
+
+.content-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.light-mode .content-section p {
+  color: #444;
+}
+
+.planet-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.planet-type {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planet-type:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.planet-type h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.planet-type p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.light-mode .planet-type {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .planet-type p {
+  color: #555;
+}
+
+.mission-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mission-list li {
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.mission-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mission-list strong {
+  color: #e74c3c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.content-footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #333;
+  margin-top: 60px;
+  color: #777;
+  font-size: 14px;
+}
+
+.light-mode .content-footer {
+  border-top: 1px solid #ddd;
+  color: #666;
+}
+
+/* Special styling for sections */
+.intro-section {
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+              url('https://science.nasa.gov/wp-content/uploads/2023/09/solar-system-illustration.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.formation-section {
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+              url('https://science.nasa.gov/wp-content/uploads/2023/09/solar-system-formation.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Move footer to bottom */
+.site-footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #777;
+  width: 100%;
+}
+
+.light-mode .site-footer {
+  background-color: rgba(240, 248, 255, 0.9);
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .content-section h2 {
+    font-size: 28px;
+  }
+  
+  .content-section p {
+    font-size: 16px;
+  }
+  
+  .planet-types {
+    grid-template-columns: 1fr;
+  }
+}
